@@ -1621,10 +1621,8 @@ library(spData)</code></pre>
 <div id="ejercicio-2-5" class="section level3">
 <h3>Ejercicio 2 (5%)</h3>
 <p>Mediante la función <code>kable()</code> del paquete <a href="https://cran.r-project.org/web/packages/knitr/">knitr</a>, despliegue en una tabla las diez primeras observaciones (i.e. filas, registros) y las cinco primeras variables (i.e. columnas) del data frame <code>world</code>.</p>
-<pre class="r"><code>kable(
-  world[1:10, 1:5, drop = TRUE], 
-  caption=&quot;Datos demográficos de los países del mundo&quot;
-)</code></pre>
+<pre class="r"><code>kable(world[1:10, 1:5, drop = TRUE], 
+  caption=&quot;Datos demográficos de los países del mundo&quot;)</code></pre>
 <table>
 <caption>
 Datos demográficos de los países del mundo
@@ -1826,11 +1824,9 @@ South America
 <div id="ejercicio-3-5" class="section level3">
 <h3>Ejercicio 3 (5%)</h3>
 <p>Mediante la función <code>kable()</code>, despliegue en una tabla las diez primeras observaciones y las variables correspondientes a nombre del país, continente, población, esperanza de vida y renta per cápita del data frame <code>world</code>. Despliegue los nombres de las columnas en español y un título para la tabla.</p>
-<pre class="r"><code>kable(
-  world[1:10, c(&quot;name_long&quot;,&quot;continent&quot;,&quot;pop&quot;,&quot;lifeExp&quot;,&quot;gdpPercap&quot;), drop = TRUE], 
+<pre class="r"><code>kable(world[1:10, c(&quot;name_long&quot;,&quot;continent&quot;,&quot;pop&quot;,&quot;lifeExp&quot;,&quot;gdpPercap&quot;), drop = TRUE], 
   col.names=c(&quot;País&quot;,&quot;Continente&quot;,&quot;Población&quot;,&quot;Esperanza de vida&quot;,&quot;Renta per cápita&quot;),  
-  caption=&quot;Datos demográficos de los países del mundo&quot;
-)</code></pre>
+  caption=&quot;Datos demográficos de los países del mundo&quot;)</code></pre>
 <table>
 <caption>
 Datos demográficos de los países del mundo
