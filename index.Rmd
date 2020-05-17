@@ -1,7 +1,7 @@
 ---
 title: "GF-0604 Procesamiento de datos geográficos<br>Laboratorio 03: R - Datos vectoriales 1"
-author: "Manuel Vargas"
-date: "2020-05-11"
+author: "Santiago Brenes"
+date: "2020-05-18"
 output:
   html_document:
     theme: readable    
@@ -136,6 +136,7 @@ kable_styling()
 ### Ejercicio 6 (25%)
 Con la función ```ggplot()``` del paquete [ggplot2](https://ggplot2.tidyverse.org/), genere un gráfico de barras que muestre la esperanza de vida de los siete países de Centroamérica. El gráfico debe tener un título, los nombres (o códigos) de los países bajo cada barra, los valores sobre las barras y etiquetas para los ejes x e y.
 ```{r}
+ggplot(centro_america, aes(x=reorder(name_long,-lifeExp), y=lifeExp)) + ggtitle("Esperanza de vida de los países de Centroamérica") + xlab("País") + ylab("Esperanza de vida en años") +  geom_col() + geom_text(aes(label=lifeExp), vjust=-0.3, size=3.5)
 ```
 
 ### Ejercicio 7 (25%)
